@@ -1,0 +1,21 @@
+{% extends 'voting/base.html' %}
+{% block title %}Profile{% endblock %}
+{% block content %}
+{% for mes in messages%}
+<p class="text-center mt-4">{{mes}}</p>
+{% endfor %}
+<div class="container py-5 position-absolute top-50 start-50 translate-middle">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="card shadow-lg">
+          <div class="card-body text-center">
+            <img src="https://img.icons8.com/?size=100&id=151IAtg8gTZE&format=png&color=000000" class="rounded-circle mb-3" alt="Profile" width="150" height="150">
+            <h3 class="card-title">{{user.first_name}}</h3><br>
+            <p class="text-muted">Register Number: {{user.username}}</p>
+            <p class="text-muted">Voted: {{profile.is_voted}}</p>
+            <p class="text-secondary">Email: {{user.email}}</p>
+          </div>
+        </div>
+    </div>
+  </div>
+{% endblock %}

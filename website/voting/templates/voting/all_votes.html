@@ -1,0 +1,89 @@
+{% extends 'voting/base.html' %}
+{% block title %} Vote {% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% if c1_votes %}
+<h1 class='text-center'>Votes for Candidate 1</h1>
+<table class="table text-center">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Register Number</th>
+      <th scope="col">Vote</th>
+    </tr>
+  </thead>
+{% for c1 in c1_votes %}
+    <tbody>
+    <tr>
+      <th scope="row">{{forloop.counter}}</th>
+      <td>{{c1.user.username}}</td>
+      <td>{{c1.candidates}}</td>
+    </tr>
+  </tbody>
+{% endfor %}
+</table>
+{% endif %}
+{% if c2_votes %}
+<h1 class='text-center'>Votes for Candidate 2</h1>
+<table class="table text-center">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Register Number</th>
+      <th scope="col">Vote</th>
+    </tr>
+  </thead>
+{% for c2 in c2_votes %}
+    <tbody>
+    <tr>
+      <th scope="row">{{forloop.counter}}</th>
+      <td>{{c2.user.username}}</td>
+      <td>{{c2.candidates}}</td>
+    </tr>
+  </tbody>
+{% endfor %}
+</table>
+{% endif %}
+{% if c3_votes %}
+<h1 class='text-center'>Votes for Candidate 3</h1>
+<table class="table text-center">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Register Number</th>
+      <th scope="col">Vote</th>
+    </tr>
+  </thead>
+{% for c3 in c3_votes %}
+    <tbody>
+    <tr>
+      <th scope="row">{{forloop.counter}}</th>
+      <td>{{c3.user.username}}</td>
+      <td>{{c3.candidates}}</td>
+    </tr>
+  </tbody>
+{% endfor %}
+</table>
+{% endif %}
+{% if c4_votes %}
+<h1 class='text-center'>Votes for Candidate 4</h1>
+<table class="table text-center">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Register Number</th>
+      <th scope="col">Vote</th>
+    </tr>
+  </thead>
+{% for c4 in c4_votes %}
+    <tbody>
+    <tr>
+      <th scope="row">{{forloop.counter}}</th>
+      <td>{{c4.user.username}}</td>
+      <td>{{c4.candidates}}</td>
+    </tr>
+  </tbody>
+{% endfor %}
+</table>
+{% endif %}
+{% endblock %}

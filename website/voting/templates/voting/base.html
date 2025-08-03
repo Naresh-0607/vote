@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item navbar-brand">
+          Home
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'vote' %}">Vote</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'view_votes' %}">View-Votes</a>
+        </li>
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+          </li>
+        </ul>
+    </div>
+  </div>
+</nav>
+{% block content %}
+
+{% endblock content %}
+</body>
+</html>

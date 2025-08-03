@@ -1,0 +1,13 @@
+{% extends "registration/base.html" %}
+{% load crispy_forms_tags %}
+{% block title%} Login {% endblock%}
+{% block name %} Login {% endblock name %}
+{% block content %}
+<p> NOTE : Use Register Nunber as Username</p>
+<form method='post'>
+    {% csrf_token %}
+    {{form|crispy}}
+    <p class="text-center">Don't have an account?? <a href="/sign-up">Click Here</a></p>
+    <button type="submit" class="btn btn-info d-block mx-auto">Log-In</button>
+</form><br>
+{% endblock content %}

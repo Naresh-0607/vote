@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%} {% endblock%}</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light d-flex align-items-center min-vh-100">
+<body class="bg-light d-flex align-items-center min-vh-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <h3 class="text-center mb-4"> {% block name %} {% endblock name %}</h3>
+                {% block content %}{% endblock content %}
+            </div>
+        </div>
+    </div>
+</body>
+</body>
+
+</html>

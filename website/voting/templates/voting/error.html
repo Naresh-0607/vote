@@ -1,0 +1,7 @@
+{% extends 'voting/base.html' %}
+{% block title %} Already Voted {% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+    {% csrf_token %}
+    <p>You Already casted your Vote click Here to go to <a href="{% url 'profile' %}">Home</a> Page</p>
+{% endblock %}
